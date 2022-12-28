@@ -39,4 +39,8 @@ TypeError: list.remove() takes exactly one argument (0 given)
 >>> l.remove(2)
 >>> l
 [0, 3, 2]
+<<<<<<< HEAD
 >>>
+=======
+>>>
+>>>>>>> cb862f9d0b2d164fda4559c557c5e6a35ae14cc8
