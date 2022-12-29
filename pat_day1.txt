@@ -1,0 +1,93 @@
+#pat exam day 1 
+#question 1 (c++)
+#include <std/bitsc++.h>
+using namespace std;
+int main()
+{
+int n,k;
+cin>>n>>k;
+int a[n];
+for(int i=0;i<n;i++){
+cin>>a[i];
+}
+int i=0;
+while(i<(k-1))
+{
+int temp=a[i];
+a[i]=a[k-1];
+a[k-1]=temp;
+i++;
+k--;
+}
+for(int i=0;i<n;i++)
+{
+cout<<a[i]<<" ";
+}
+return 0;
+}
+
+#question 1 python
+
+n=int(input())
+k=int(input())
+
+a=[]
+for i in range(n):
+	temp=int(input())
+	a.append(temp)
+
+i=0
+while i<(k-1):
+	a[i],a[k-1]=a[k-1],a[i]
+	i+=1
+	k-=1
+for i in range(n):
+	print(a[i],end=" ")
+
+
+# question 2 c++
+
+#include<std/bitsc++.h>
+using namespace std;
+int main()
+{
+int t;
+cin>>t;
+while(t--)
+{
+int n;
+cin>>n;
+int a[n];
+for(int i=0;i<n;i++)
+{
+cin>>a[i];
+}
+for(int i=0;i<n;i++)
+{
+int c=0;
+for(int j=0;j<=i;j++)
+{
+if(a[j]<=a[i])
+{
+c++;
+}
+cout<<c<<" "; 
+}
+}
+}
+return 0;
+}
+
+#question 2 python
+
+n=int(input())
+l=list(map(int,input().split(" ")))
+ans=[i for i in range(n)]
+for i in range(1,n):
+	e=l[i]
+	c=0
+	for i in range(0,i):
+		if l[i]<=e:
+			c+=1
+	e[i]+=c
+print(e)
