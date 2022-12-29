@@ -1,0 +1,47 @@
+class node:
+    def __init__(self,data=None):
+        self.data=data
+        self.next=None
+class ll:
+    def __init__(self):
+        self.head=None
+    def printLL(self):
+        i=self.head
+        while i!=None:
+            print(i.data)
+            i=i.next
+    def middlell(self):
+        count=0
+        i=self.head
+        while i!=None:
+            count+=1
+            i=i.next
+        mid=int(count/2)
+        temp=0
+        i=self.head
+        while temp<mid:
+            i=i.next
+            temp+=1
+        print(i.data)
+    def insertll(self,data):
+        new=node(data)
+        if self.head==None:
+            new.next=None
+            self.head=new
+        else:
+            i=self.head
+            while i.next!=None:
+                i=i.next
+            i.next=new
+            
+
+p=ll()
+n=node(5)
+p.head=n
+n2=node(4)
+n.next=n2
+n3=node(10)
+n2.next=n3
+p.insertll(11)
+p.printLL()
+p.middlell()

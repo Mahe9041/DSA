@@ -1,0 +1,43 @@
+#search
+
+#linear search
+n=int(input())
+l=[]
+for i in range(n):
+    temp=int(input())
+    l.append(temp)
+x=int(input())
+flag=0
+pos=0
+for i in range(n):
+    if a[i]==x:
+        flag=1
+        pos=i
+if flag==1:
+    print("NOT FOUND!")
+else:
+    print("ELEMENT FOUND AT POSITION : "+i)
+
+#binary search
+n=int(input())
+l=[]
+for i in range(n):
+    t=int(input())
+    l.append(t)
+l.sort()
+x=int(input())
+h=n-1
+low=0
+f=0
+while low<=h:
+    m=int((h+low)/2)
+    if l[m]==x:
+        print("Element found at: " +str(m))
+        f=1
+        break
+    elif x>l[m]:
+        low=m+1
+    else:
+        h=m-1
+if f==0:
+    print("Element not found!!")
