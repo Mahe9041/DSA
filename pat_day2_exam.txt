@@ -1,0 +1,36 @@
+#1
+
+n=int(input())
+l=[]
+l=list(map(int,input().split(" ")))
+e=[]
+o=[]
+for i in range(n):
+  if i%2==0:
+    e.append(l[i])
+  else:
+    o.append(l[i])
+e.sort()
+o.sort()
+j=0
+for i in range(n):
+  if i%2==0:
+    print(e.pop(0),end=" ")
+  else:
+    print(o.pop(),end=" ")
+
+#2
+
+v=int(input())
+n=int(input())
+
+l=[]
+l=list(map(int,input().split(" ")))
+
+f=0
+for i in range(n):
+  if l[i]==v:
+    f=1
+    pos=i
+if f==1:
+  print(pos)
